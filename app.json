@@ -1,0 +1,63 @@
+{
+  "expo": {
+    "name": "QVAC-BOARD",
+    "slug": "qvac-mobile",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "dark",
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "dev.qvacboard.mobile",
+      "infoPlist": {
+        "NSLocalNetworkUsageDescription": "QVAC-BOARD si collega direttamente al tuo server sulla rete di casa, senza passare da internet.",
+        "UIFileSharingEnabled": true,
+        "LSSupportsOpeningDocumentsInPlace": true,
+        "NSBluetoothAlwaysUsageDescription": "QVAC-BOARD usa il Bluetooth per collegarsi al tuo server qui vicino quando non c’è rete. Il collegamento è cifrato.",
+        "NSMicrophoneUsageDescription": "QVAC-BOARD usa il microfono per consentirti di parlare con l’assistente vocale.",
+        "NSSpeechRecognitionUsageDescription": "QVAC-BOARD usa il riconoscimento vocale per comprendere quello che dici durante la conversazione."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#000000",
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png"
+      },
+      "predictiveBackGestureEnabled": false,
+      "package": "dev.qvacboard.mobile"
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      [
+        "@qvac/sdk/expo-plugin",
+        {
+          "installMissingPrebuilds": true
+        }
+      ],
+      "expo-secure-store",
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "QVAC-BOARD usa la fotocamera per leggere i QR code e, quando lo scegli tu, per scattare una foto da inviare.",
+          "microphonePermission": "QVAC-BOARD usa il microfono per consentirti di parlare con l’assistente vocale.",
+          "recordAudioAndroid": true
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "QVAC-BOARD apre le foto solo quando scegli tu quale inviare al tuo server o a un contatto.",
+          "cameraPermission": "QVAC-BOARD usa la fotocamera per leggere i QR code e, quando lo scegli tu, per scattare una foto da inviare.",
+          "microphonePermission": "QVAC-BOARD usa il microfono per consentirti di parlare con l’assistente vocale."
+        }
+      ],
+      "expo-audio",
+      "expo-speech-recognition",
+      "expo-sharing"
+    ],
+    "backgroundColor": "#0a0d0c"
+  }
+}
