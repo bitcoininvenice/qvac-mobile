@@ -1,0 +1,7 @@
+{
+  "name": "empty-crypto",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Stands in for node:crypto in the Bare worker (see index.js)",
+  "main": "index.js"
+}

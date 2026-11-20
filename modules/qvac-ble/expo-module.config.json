@@ -1,0 +1,5 @@
+{
+  "platforms": ["apple", "android"],
+  "apple": { "modules": ["QvacBleModule"] },
+  "android": { "modules": ["expo.modules.qvacble.QvacBleModule"] }
+}

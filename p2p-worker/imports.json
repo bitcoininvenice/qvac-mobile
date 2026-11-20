@@ -1,0 +1,4 @@
+{
+  "node:crypto": "empty-crypto",
+  "crypto": "empty-crypto"
+}

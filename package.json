@@ -1,0 +1,48 @@
+{
+  "name": "qvac-mobile",
+  "version": "1.0.0",
+  "main": "index.ts",
+  "dependencies": {
+    "@noble/curves": "^1.9.7",
+    "@noble/hashes": "^1.8.0",
+    "@qvac/fabric-android-arm64": "0.29.2",
+    "@qvac/fabric-ios": "0.29.2",
+    "@qvac/sdk": "^0.24.0",
+    "b4a": "^1.9.0",
+    "bare-ws": "^3.3.0",
+    "empty-crypto": "file:p2p-worker/empty-crypto",
+    "expo": "~58.0.26",
+    "expo-audio": "~58.0.12",
+    "expo-build-properties": "~58.0.12",
+    "expo-camera": "~58.0.14",
+    "expo-device": "~58.0.5",
+    "expo-document-picker": "~58.0.5",
+    "expo-file-system": "~58.0.14",
+    "expo-haptics": "~58.0.8",
+    "expo-image-picker": "~58.0.10",
+    "expo-secure-store": "~58.0.3",
+    "expo-sharing": "~58.0.23",
+    "expo-speech": "~58.0.4",
+    "expo-speech-recognition": "^58.0.1",
+    "expo-status-bar": "~58.0.5",
+    "p2p-worker-pkg": "file:p2p-worker-pkg",
+    "react": "19.3.0",
+    "react-native": "0.88.1",
+    "react-native-bare-kit": "^0.17.1",
+    "react-native-safe-area-context": "~5.11.1",
+    "react-native-svg": "15.16.0",
+    "toqr": "^0.1.1"
+  },
+  "devDependencies": {
+    "@types/react": "~19.3.0",
+    "typescript": "~6.0.3"
+  },
+  "scripts": {
+    "start": "expo start",
+    "android": "expo run:android",
+    "ios": "expo run:ios",
+    "web": "expo start --web",
+    "worker:pack": "bare-stow pack --target react-native --host ios-arm64 --host android-arm64 --imports p2p-worker/imports.json --out ./p2p-worker-pkg p2p-worker/worker.js"
+  },
+  "private": true
+}
